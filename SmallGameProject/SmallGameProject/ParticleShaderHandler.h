@@ -1,0 +1,46 @@
+#ifndef PARTICLESHADERHANDLER_H
+#define PARTICLESHADERHANDLER_H
+
+#include <windows.h>
+#include <d3d11.h>
+#include <d3dcompiler.h>
+#include <directxmath.h>
+#include <fstream>
+
+#include "ShaderStructLibrary.h"
+
+class ParticleShaderHandler {
+private:
+	struct CBPerEmitter
+	{
+		DirectX::XMMATRIX world;
+		DirectX::XMMATRIX view;
+		DirectX::XMMATRIX projection;
+
+		DirectX::XMFLOAT4 camPos;
+	};
+
+	ID3D11VertexShader* vertexShader;
+	ID3D11GeometryShader* geoShader;
+	ID3D11PixelShader* pixelShader;
+	ID3D11InputLayout* layout;
+	ID3D11Buffer* matrixBuffer;
+	ID3D11SamplerState* samplerState;
+
+	void OutputShaderErrorMessage(ID3D10Blob* errorMessage, HWND* hwnd, WCHAR* shaderFilename);
+
+	bool SetShaderParameters(ID3D11DeviceContext* deviceContext, ParticleShaderParameters* params);
+
+	void RenderShader(ID3D11DeviceContext* deviceContext, int indexCount, int indexStart);
+
+public:
+	ParticleShaderHandler();
+	~ParticleShaderHandler();
+
+	bool Initialize(ID3D11Device* device, HWND* hwnd);
+	void Shutdown();
+
+	bool Render(ID3D11DeviceContext* deviceContext, int indexCount, int indexStart, ParticleShaderParameters* params);
+};
+
+#endif

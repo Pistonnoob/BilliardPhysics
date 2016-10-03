@@ -1,0 +1,526 @@
+newmtl HL_glass1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl HL_glass2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl HL_glass3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl HL_glass4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl HL_glassSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl Material__269SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl Material__270SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl Material__272SG
+illum 4
+Kd 0.02 0.05 0.07
+Ka 0.02 0.05 0.07
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 0.83 0.83 0.83
+newmtl Material__274SG
+illum 4
+Kd 0.37 0.00 0.00
+Ka 0.37 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl Material__275SG
+illum 4
+Kd 0.37 0.00 0.00
+Ka 0.37 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl Material__276SG
+illum 4
+Kd 0.38 0.38 0.38
+Ka 0.38 0.38 0.38
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.81 0.81 0.81
+newmtl Rim_metalSG
+illum 4
+Kd 0.29 0.29 0.29
+Ka 0.29 0.29 0.29
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.14 1.14 1.14
+Ns 18.00
+newmtl body_paint1SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paint2SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paint3SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paint4SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paint5SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paint6SG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl body_paintSG
+illum 4
+Kd 0.62 0.26 0.15
+Ka 0.62 0.26 0.15
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.92 0.92 0.92
+Ns 18.00
+newmtl carbonfiber1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd carbonfiber.tga
+Ni 1.50
+Ks 0.78 0.78 0.78
+newmtl carbonfiber2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd carbonfiber.tga
+Ni 1.50
+Ks 0.78 0.78 0.78
+newmtl carbonfiberSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd carbonfiber.tga
+Ni 1.50
+Ks 0.78 0.78 0.78
+newmtl chrome1SG
+illum 4
+Kd 0.42 0.42 0.42
+Ka 0.42 0.42 0.42
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.89 0.89 0.89
+newmtl chrome2SG
+illum 4
+Kd 0.40 0.40 0.40
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.83 0.83 0.83
+newmtl chrome3SG
+illum 4
+Kd 0.32 0.33 0.33
+Ka 0.32 0.33 0.33
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl chrome4SG
+illum 4
+Kd 0.32 0.33 0.33
+Ka 0.32 0.33 0.33
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl chromeSG
+illum 4
+Kd 0.32 0.33 0.33
+Ka 0.32 0.33 0.33
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl disc1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl disc11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl discSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd nodamage_lod0.tga
+Ni 1.50
+Ks 0.65 0.65 0.65
+newmtl engineSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd engine.tga
+Ni 1.50
+Ks 0.60 0.60 0.60
+newmtl gaugesSG
+illum 4
+Kd 0.94 1.00 0.99
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.60 1.00 0.91
+newmtl glass_windSG
+illum 4
+Kd 0.02 0.05 0.07
+Ka 0.02 0.05 0.07
+Tf 0.43 0.43 0.43
+Ni 1.50
+Ks 0.83 0.83 0.83
+newmtl grille1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd grille1_alpha.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl grille2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd grille1_alpha.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl grille3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd grille1_alpha.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl interior1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 0.89 0.89 0.89
+newmtl interior2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.07 0.25 0.51
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl interior3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 0.89 0.89 0.89
+newmtl interior4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.07 0.25 0.51
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl interior5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 0.89 0.89 0.89
+newmtl interior6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.07 0.25 0.51
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl interiorSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd interior_lod0.tga
+Ni 1.50
+Ks 0.89 0.89 0.89
+newmtl lights1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd lights_lod0.tga
+Ni 1.50
+Ks 1.10 1.10 1.10
+newmtl lights2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd lights_lod0.tga
+Ni 1.50
+Ks 1.10 1.10 1.10
+newmtl lights3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd lights_lod0.tga
+Ni 1.50
+Ks 1.10 1.10 1.10
+newmtl lights4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd lights_lod0.tga
+Ni 1.50
+Ks 1.10 1.10 1.10
+newmtl lightsSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd lights_lod0.tga
+Ni 1.50
+Ks 1.10 1.10 1.10
+newmtl plastic1SG
+illum 4
+Kd 0.13 0.13 0.13
+Ka 0.13 0.13 0.13
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl plastic2SG
+illum 4
+Kd 0.20 0.20 0.20
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl plastic3SG
+illum 4
+Kd 0.13 0.13 0.13
+Ka 0.13 0.13 0.13
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl plastic4SG
+illum 4
+Kd 0.13 0.13 0.13
+Ka 0.13 0.13 0.13
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl plastic5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl plasticSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 1.00 1.00 1.00
+newmtl sls_interiorSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd sls_interior.tga
+Ni 1.50
+Ks 0.86 0.86 0.86
+newmtl tireSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd tire.tga
+Ni 1.50
+Ks 0.35 0.35 0.35
+newmtl undercarriage1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd undercarriage.tga
+Ni 1.50
+Ks 0.58 0.58 0.58
+newmtl undercarriage2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd undercarriage.tga
+Ni 1.50
+Ks 0.58 0.58 0.58
+newmtl undercarriageSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd undercarriage.tga
+Ni 1.50
+Ks 0.58 0.58 0.58
