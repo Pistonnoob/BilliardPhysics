@@ -8,10 +8,14 @@ class BilliardState :
 private:
 	CameraHandler myCamera;
 
-	Model m_ball;
-	Model m_ground;
-	Model m_cue; //Cue stick
+	Model m_ballCue;
+	Model m_ball8;
+	Model m_cueStick; //Cue stick
 	Model m_table;
+
+	CameraHandler myCamera;
+
+	bool ballsNotMoving;
 
 public:
 	BilliardState();
