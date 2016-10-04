@@ -3,6 +3,7 @@
 #include "GameState.h"
 #include "Model.h"
 #include "HubState.h"
+#include "BilliardState.h"
 
 enum MenuOption {
 	START_GAME,

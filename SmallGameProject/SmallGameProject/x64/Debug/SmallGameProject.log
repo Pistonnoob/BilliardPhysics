@@ -1,85 +1,26 @@
-﻿Build started 2016-10-03 15:37:40.
+﻿Build started 2016-10-04 12:27:44.
      1>Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" on node 2 (Build target(s)).
-     1>FxCompile:
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredGeometryShader.cso" /Od /Zi DeferredGeometryShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredGeometryShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredPixelShader.cso" /Od /Zi DeferredPixelShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredPixelShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredVertexShader.cso" /Od /Zi DeferredVertexShader.hlsl 
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\DeferredVertexShader.hlsl(50,28-57): warning X3206: 'mul': implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\DeferredVertexShader.hlsl(50,2-58): warning X3206: implicit truncation of vector type
-         
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\DeferredVertexShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_3 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\FontPixelShader.cso" /Od /Zi FontPixelShader.hlsl 
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\FontPixelShader.hlsl(30,20-42): warning X3206: implicit truncation of vector type
-         
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\FontPixelShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_3 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\FontVertexShader.cso" /Od /Zi FontVertexShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\FontVertexShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\LightPixelShader.cso" /Od /Zi LightPixelShader.hlsl 
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(82,9-40): warning X3206: implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(124,28-51): warning X3206: 'reflect': implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(131,8-34): warning X3206: implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(139,18-34): warning X3203: signed/unsigned mismatch, unsigned assumed
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(147,23-46): warning X3206: 'reflect': implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(150,4-30): warning X3206: implicit truncation of vector type
-     1>C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\LightPixelShader.hlsl(155,30-48): warning X3206: 'dot': implicit truncation of vector type
-         
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\LightPixelShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\LightVertexShader.cso" /Od /Zi LightVertexShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\LightVertexShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_4_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticleGeometryShader.cso" /Od /Zi ParticleGeometryShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticleGeometryShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticlePixelShader.cso" /Od /Zi ParticlePixelShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticlePixelShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticleVertexShader.cso" /Od /Zi ParticleVertexShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ParticleVertexShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_3 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\UIPixelShader.cso" /Od /Zi UIPixelShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\UIPixelShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\UIVertexShader.cso" /Od /Zi UIVertexShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\UIVertexShader.cso
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_5_0 /Fo "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ShadowMapVertexShader.cso" /Od /Zi ShadowMapVertexShader.hlsl 
-         compilation object save succeeded; see C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\ShadowMapVertexShader.cso
-       ClCompile:
-         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Ability.cpp Actor.cpp Ai.cpp Algorithm.cpp ArcFire.cpp AudioHandler.cpp BomberEnemy.cpp Boss.cpp BoundingVolume.cpp BoxBoundingVolume.cpp CameraHandler.cpp Command.cpp D3DHandler.cpp DeferredShaderHandler.cpp EmitterClusterExplosion.cpp EmitterEnemySpawn.cpp EmitterExplosion.cpp EmitterHolder.cpp EmitterPlayerSpawn.cpp EmitterPrototype.cpp EmitterSpawnPulse.cpp Enemy.cpp Entity.cpp EntitySubject.cpp FireCommand.cpp Font.cpp FontShaderHandler.cpp GameData.cpp GameState.cpp GameStateHandler.cpp GraphicHandler.cpp HubState.cpp InputHandler.cpp LightShaderHandler.cpp main.cpp MeleeEnemy.cpp MenuState.cpp Model.cpp MoveDownCommand.cpp MoveLeftCommand.cpp MoveRightCommand.cpp MoveUpCommand.cpp Observer.cpp Particle.cpp ParticleEmitter.cpp ParticleHandler.cpp ParticleShaderHandler.cpp Player.cpp PowerUp.cpp Projectile.cpp ProjectileHandler.cpp RangedEnemy.cpp ReverseFire.cpp ScreenQuad.cpp ShadowShaderHandler.cpp SoundHandler.cpp SphereBoundingVolume.cpp SplitFire.cpp StageState.cpp StartState.cpp Subject.cpp System.cpp TestState.cpp TextHandler.cpp Texture.cpp UIElement.cpp UIHandler.cpp UIShaderHandler.cpp Weapon.cpp
-         Weapon.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\weapon.cpp(79): warning C4305: 'argument': truncation from 'double' to 'float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\weapon.cpp(82): warning C4305: 'argument': truncation from 'double' to 'float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\weapon.cpp(85): warning C4305: 'argument': truncation from 'double' to 'float'
-         UIShaderHandler.cpp
-         UIHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uihandler.cpp(96): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uihandler.cpp(105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-         UIElement.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(39): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(54): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(37): warning C4101: 'result': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(213): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uielement.cpp(214): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-         Texture.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texture.cpp(251): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texture.cpp(335): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-         TextHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(87): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(27): warning C4101: 'result': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(99): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(107): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(108): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\texthandler.cpp(174): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-         TestState.cpp
+     1>ClCompile:
+         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp GameState.cpp GameStateHandler.cpp HubState.cpp main.cpp MenuState.cpp StageState.cpp StartState.cpp System.cpp
          System.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\system.cpp(285): warning C4305: '=': truncation from 'double' to 'float'
-         Subject.cpp
          StartState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          StageState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(324): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(339): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(417): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
@@ -91,210 +32,44 @@
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(812): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(816): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(820): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-         SplitFire.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\splitfire.cpp(33): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-         SphereBoundingVolume.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\sphereboundingvolume.cpp(108): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-         SoundHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\soundhandler.cpp(163): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\soundhandler.cpp(176): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\soundhandler.cpp(293): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\soundhandler.cpp(300): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-         ShadowShaderHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\shadowshaderhandler.cpp(40): warning C4101: 'e': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\shadowshaderhandler.cpp(121): warning C4101: 'e': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\shadowshaderhandler.cpp(171): warning C4244: '=': conversion from 'float' to 'UINT', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\shadowshaderhandler.cpp(172): warning C4244: '=': conversion from 'float' to 'UINT', possible loss of data
-         ScreenQuad.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\screenquad.cpp(25): warning C4101: 'result': unreferenced local variable
-         ReverseFire.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\reversefire.cpp(32): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-         RangedEnemy.cpp
-         ProjectileHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(152): warning C4101: 'event': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(168): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(175): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(189): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(196): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(266): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\projectilehandler.cpp(268): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-         Projectile.cpp
-         Generating Code...
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\shadowshaderhandler.cpp(348): warning C4715: 'ShadowShaderHandler::SetShaderParameters': not all control paths return a value
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\uihandler.cpp(118): warning C4715: 'UIHandler::RemoveElement': not all control paths return a value
-         Compiling...
-         PowerUp.cpp
-         Player.cpp
-         ParticleShaderHandler.cpp
-         ParticleHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         ParticleEmitter.cpp
-         Particle.cpp
-         Observer.cpp
-         MoveUpCommand.cpp
-         MoveRightCommand.cpp
-         MoveLeftCommand.cpp
-         MoveDownCommand.cpp
-         Model.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(22): warning C4101: 'result': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(166): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(331): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(340): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(380): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(381): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(239): warning C4101: 'point': unreferenced local variable
          MenuState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         MeleeEnemy.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\meleeenemy.cpp(34): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          main.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         LightShaderHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\lightshaderhandler.cpp(357): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\lightshaderhandler.cpp(358): warning C4018: '<=': signed/unsigned mismatch
-         InputHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\inputhandler.cpp(229): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\inputhandler.cpp(306): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          HubState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         GraphicHandler.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          GameStateHandler.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         Generating Code...
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\model.cpp(124): warning C4715: 'Model::Initialize': not all control paths return a value
-         Compiling...
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          GameState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-         GameData.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\gamedata.cpp(201): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-         FontShaderHandler.cpp
-         Font.cpp
-         FireCommand.cpp
-         EntitySubject.cpp
-         Entity.cpp
-         Enemy.cpp
-         EmitterSpawnPulse.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterspawnpulse.cpp(133): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-         EmitterPrototype.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterprototype.cpp(145): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterprototype.cpp(239): warning C4101: 'emitParticle': unreferenced local variable
-         EmitterPlayerSpawn.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(107): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(203): warning C4101: 'index': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(203): warning C4101: 'j': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(203): warning C4101: 'i': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(201): warning C4101: 'emitParticle': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterplayerspawn.cpp(317): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-         EmitterHolder.cpp
-         EmitterExplosion.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.cpp(95): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-         EmitterEnemySpawn.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(196): warning C4101: 'index': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(196): warning C4101: 'j': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(196): warning C4101: 'i': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(194): warning C4101: 'emitParticle': unreferenced local variable
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterenemyspawn.cpp(310): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-         EmitterClusterExplosion.cpp
-         DeferredShaderHandler.cpp
-         D3DHandler.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\d3dhandler.cpp(28): warning C4101: 'resultHelper': unreferenced local variable
-         Command.cpp
-         CameraHandler.cpp
-         BoxBoundingVolume.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\boxboundingvolume.cpp(193): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+         BilliardState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
+         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
          Generating Code...
-         Compiling...
-         BoundingVolume.cpp
-         Boss.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\boss.cpp(34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\boss.cpp(47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\boss.cpp(57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-         BomberEnemy.cpp
-         AudioHandler.cpp
-         ArcFire.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\arcfire.cpp(29): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-         Algorithm.cpp
-         Ai.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\ai.cpp(192): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\ai.cpp(194): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-         Actor.cpp
-         Ability.cpp
-         Generating Code...
-       Link:
-         E:\Program Files (x86)\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.lib" /MACHINE:X64 x64\Debug\Ability.obj
-         x64\Debug\Actor.obj
-         x64\Debug\Ai.obj
-         x64\Debug\Algorithm.obj
-         x64\Debug\ArcFire.obj
-         x64\Debug\AudioHandler.obj
-         x64\Debug\BomberEnemy.obj
-         x64\Debug\Boss.obj
-         x64\Debug\BoundingVolume.obj
-         x64\Debug\BoxBoundingVolume.obj
-         x64\Debug\CameraHandler.obj
-         x64\Debug\Command.obj
-         x64\Debug\D3DHandler.obj
-         x64\Debug\DeferredShaderHandler.obj
-         x64\Debug\EmitterClusterExplosion.obj
-         x64\Debug\EmitterEnemySpawn.obj
-         x64\Debug\EmitterExplosion.obj
-         x64\Debug\EmitterHolder.obj
-         x64\Debug\EmitterPlayerSpawn.obj
-         x64\Debug\EmitterPrototype.obj
-         x64\Debug\EmitterSpawnPulse.obj
-         x64\Debug\Enemy.obj
-         x64\Debug\Entity.obj
-         x64\Debug\EntitySubject.obj
-         x64\Debug\FireCommand.obj
-         x64\Debug\Font.obj
-         x64\Debug\FontShaderHandler.obj
-         x64\Debug\GameData.obj
-         x64\Debug\GameState.obj
-         x64\Debug\GameStateHandler.obj
-         x64\Debug\GraphicHandler.obj
-         x64\Debug\HubState.obj
-         x64\Debug\InputHandler.obj
-         x64\Debug\LightShaderHandler.obj
-         x64\Debug\main.obj
-         x64\Debug\MeleeEnemy.obj
-         x64\Debug\MenuState.obj
-         x64\Debug\Model.obj
-         x64\Debug\MoveDownCommand.obj
-         x64\Debug\MoveLeftCommand.obj
-         x64\Debug\MoveRightCommand.obj
-         x64\Debug\MoveUpCommand.obj
-         x64\Debug\Observer.obj
-         x64\Debug\Particle.obj
-         x64\Debug\ParticleEmitter.obj
-         x64\Debug\ParticleHandler.obj
-         x64\Debug\ParticleShaderHandler.obj
-         x64\Debug\Player.obj
-         x64\Debug\PowerUp.obj
-         x64\Debug\Projectile.obj
-         x64\Debug\ProjectileHandler.obj
-         x64\Debug\RangedEnemy.obj
-         x64\Debug\ReverseFire.obj
-         x64\Debug\ScreenQuad.obj
-         x64\Debug\ShadowShaderHandler.obj
-         x64\Debug\SoundHandler.obj
-         x64\Debug\SphereBoundingVolume.obj
-         x64\Debug\SplitFire.obj
-         x64\Debug\StageState.obj
-         x64\Debug\StartState.obj
-         x64\Debug\Subject.obj
-         x64\Debug\System.obj
-         x64\Debug\TestState.obj
-         x64\Debug\TextHandler.obj
-         x64\Debug\Texture.obj
-         x64\Debug\UIElement.obj
-         x64\Debug\UIHandler.obj
-         x64\Debug\UIShaderHandler.obj
-         x64\Debug\Weapon.obj
-         SmallGameProject.vcxproj -> C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe
-     1>Done Building Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:01:24.21
+Time Elapsed 00:00:14.02

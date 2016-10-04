@@ -294,6 +294,9 @@
     <ClCompile Include="EmitterSpawnPulse.cpp">
       <Filter>Source Files\Observers\ParticleHandler</Filter>
     </ClCompile>
+    <ClCompile Include="BilliardState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="System.h">
@@ -514,6 +517,9 @@
     </ClInclude>
     <ClInclude Include="EmitterSpawnPulse.h">
       <Filter>Header Files\Observers\ParticleHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="BilliardState.h">
+      <Filter>Header Files\GameStates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

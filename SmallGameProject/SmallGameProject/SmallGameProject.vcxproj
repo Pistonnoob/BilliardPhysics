@@ -152,6 +152,7 @@
     <ClCompile Include="Algorithm.cpp" />
     <ClCompile Include="ArcFire.cpp" />
     <ClCompile Include="AudioHandler.cpp" />
+    <ClCompile Include="BilliardState.cpp" />
     <ClCompile Include="BomberEnemy.cpp" />
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BoundingVolume.cpp" />
@@ -223,6 +224,7 @@
     <ClInclude Include="Ai.h" />
     <ClInclude Include="Algorithm.h" />
     <ClInclude Include="AudioHandler.h" />
+    <ClInclude Include="BilliardState.h" />
     <ClInclude Include="BomberEnemy.h" />
     <ClInclude Include="Boss.h" />
     <ClInclude Include="BoundingVolume.h" />
