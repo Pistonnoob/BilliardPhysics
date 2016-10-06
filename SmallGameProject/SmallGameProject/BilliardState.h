@@ -38,7 +38,7 @@ private:
 		float height = 8.0f;
 	};
 
-	Catcher billiardCatchers[6];
+	/*Catcher billiardCatchers[6];*/
 
 public:
 	BilliardState();

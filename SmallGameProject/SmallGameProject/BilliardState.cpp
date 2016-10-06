@@ -14,6 +14,7 @@ BilliardState::BilliardState()
 
 	this->simulationCompleted = true;
 	this->exitStage = false;
+	this->manualClearing = false;
 	
 
 }
@@ -25,11 +26,14 @@ BilliardState::~BilliardState()
 
 void BilliardState::Shutdown()
 {
-	GameState::Shutdown();
 	this->m_cueBall.Shutdown();
 	this->m_8Ball.Shutdown();
 	this->m_cueStick.Shutdown();
 	this->m_table.Shutdown();
+
+	//delete this->billiardCatchers;
+
+	GameState::Shutdown();
 }
 
 int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
@@ -38,8 +42,9 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 
 	this->exitStage = false;
 	this->simulationCompleted = true;
+	this->manualClearing = false;
 
-	this->billiardCatchers[0].radius = 6.5f;
+	/*this->billiardCatchers[0].radius = 6.5f;
 	this->billiardCatchers[1].radius = 6.5f;
 	this->billiardCatchers[2].radius = 10.0f;
 	this->billiardCatchers[3].radius = 10.0f;
@@ -57,7 +62,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[2].pos.z = -133.0f;
 	this->billiardCatchers[3].pos.z = -133.0f;
 	this->billiardCatchers[4].pos.z = 133.0f;
-	this->billiardCatchers[5].pos.z = 133.0f;
+	this->billiardCatchers[5].pos.z = 133.0f;*/
 
 	ID3D11Device* device = gHandler->GetDevice();
 	ID3D11DeviceContext* deviceContext = gHandler->GetDeviceContext();

@@ -3,7 +3,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd PALLA 08.jpg
+map_Kd PALLA-08.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
@@ -12,7 +12,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd BallCue.jpg
+map_Kd BallCue.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
@@ -21,7 +21,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd seamless-wood-white.jpg
+map_Kd seamless-wood-white.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
@@ -30,7 +30,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd Tileable Cream marble floor tile texture.png
+map_Kd Tileable-Cream-marble-floor-tile-texture.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
@@ -39,7 +39,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd felt_01.jpg
+map_Kd felt_01.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
@@ -48,7 +48,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd seamless-wood3.jpg
+map_Kd seamless-wood3.tga
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 50.99
