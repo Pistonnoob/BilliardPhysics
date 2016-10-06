@@ -23,6 +23,9 @@ private:
 	const float FRICTIONCOEFFICIENT_BETWEEN_BALL_AND_VELVET = 0.005f;
 	const float GRAVITY = 9.82;
 	const float SCALING = 1.0f;
+	const float BOARD_WIDTH = 140.0f;
+	const float BOARD_HEIGHT = 1.0f;
+	const int OTHER_BALL_COUNT = 1;
 
 	struct Ball {
 		DirectX::XMFLOAT3 pos;
@@ -39,6 +42,10 @@ private:
 	};
 
 	Catcher billiardCatchers[6];
+
+	Ball activeBall;
+	Ball otherBalls[1];
+
 
 public:
 	BilliardState();

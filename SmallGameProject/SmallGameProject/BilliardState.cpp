@@ -62,6 +62,21 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[4].pos.z = 133.0f;
 	this->billiardCatchers[5].pos.z = 133.0f;
 
+	this->activeBall.pos = DirectX::XMFLOAT3(0.0f, 1.0f, 10.0f);
+	this->activeBall.velocity = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
+	this->activeBall.radius = 0.0476f;
+	this->activeBall.mass = 0.17f;
+	this->activeBall.density = 1700;
+
+	for (int i = 0; i < OTHER_BALL_COUNT; i++)
+	{
+		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f, 1.0f, 0.0f);
+		this->otherBalls[i].velocity = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
+		this->otherBalls[i].radius = 0.0508f;
+		this->otherBalls[i].mass = 0.16f;
+		this->otherBalls[i].density = 1700;
+	}
+
 	ID3D11Device* device = gHandler->GetDevice();
 	ID3D11DeviceContext* deviceContext = gHandler->GetDeviceContext();
 
@@ -98,7 +113,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 
 		//Open thy eyes!
 		bool cameraResult = this->myCamera.Initialize();
-		float zoomIn = 1.0f / 6.0f;
+		float zoomIn = 1.0f / 10.0f;
 
 		/*this->myCamera.SetCameraPos(DirectX::XMFLOAT3(0.0f, 10.0f / zoomIn, -7.0f / zoomIn));
 		this->myCamera.SetCameraPos(DirectX::XMFLOAT3(0.0f, 0.0f, -20.0f));*/
@@ -117,7 +132,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 		light.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Ambient = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-		light.Position = DirectX::XMFLOAT4(0.0f, 10.0f, 0.0f, 1.0f);
+		light.Position = DirectX::XMFLOAT4(0.0f, 20.0f, -4.0f, 1.0f);
 		light.Attenuation = DirectX::XMFLOAT4(50.0f, 1.0f, 0.09f, 0.032f);
 		this->pointLights.push_back(light);
 
@@ -152,6 +167,14 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Something went somewhat wrong here eh?
 		}
 	}
+	else
+	{
+		DirectX::XMMATRIX posOffset;
+		posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
+		this->m_cueBall.SetWorldMatrix(posOffset);
+		posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->otherBalls[0].pos));
+		this->m_8Ball.SetWorldMatrix(posOffset);
+	}
 
 	return result;
 }
@@ -161,8 +184,12 @@ int BilliardState::Render(GraphicHandler * gHandler, HWND hwnd)
 	int result = 0;
 	result = 1;
 
+	gHandler->DeferredRender(&this->m_cueBall, &this->myCamera);
+	gHandler->DeferredRender(&this->m_8Ball, &this->myCamera);
+	gHandler->DeferredRender(&this->m_cueStick, &this->myCamera);
+	gHandler->DeferredRender(&this->m_table, &this->myCamera);
 
-
+	gHandler->LightRender(this->myCamera.GetCameraPos(), this->pointLights);
 
 
 	return result;
