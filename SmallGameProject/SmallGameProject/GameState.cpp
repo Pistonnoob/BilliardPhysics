@@ -16,6 +16,8 @@ GameState::~GameState()
 void GameState::Shutdown()
 {
 	this->m_GSH = NULL;
+	this->m_device = NULL;
+	this->m_deviceContext = NULL;
 }
 
 int GameState::InitializeBase(GameStateHandler * GSH, ID3D11Device* device, ID3D11DeviceContext* deviceContext)

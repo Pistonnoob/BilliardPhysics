@@ -89,7 +89,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 			return -1;
 		}
 
-		modelResult = this->m_table.Initialize(device, this->m_deviceContext, "Shuttle");
+		modelResult = this->m_table.Initialize(device, this->m_deviceContext, "BilliardBoard");
 		if (!modelResult) {
 			return -1;
 		}
@@ -115,13 +115,13 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 			result = 1;
 
 		//And the developer said "Let there be light!", and so light came to be
-		PointLight light;
+		/*PointLight light;
 		light.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Ambient = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Position = DirectX::XMFLOAT4(0.0f, 10.0f, 0.0f, 1.0f);
 		light.Attenuation = DirectX::XMFLOAT4(50.0f, 1.0f, 0.09f, 0.032f);
-		this->pointLights.push_back(light);
+		this->pointLights.push_back(light);*/
 
 	}
 
