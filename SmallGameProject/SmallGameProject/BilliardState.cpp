@@ -169,6 +169,21 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 	}
 	else
 	{
+		//Update the balls
+
+		//Move the balls
+		this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.velocity.x * deltaTime,
+			this->activeBall.pos.y + this->activeBall.velocity.y * deltaTime,
+			this->activeBall.pos.z + this->activeBall.velocity.z * deltaTime);
+		for (int i = 0; i < OTHER_BALL_COUNT; i++)
+		{
+			
+		}
+		//Check collisions
+			//Correct collisions
+				//transfer velocities
+
+		//Set the positions of the ball models to be accurate
 		DirectX::XMMATRIX posOffset;
 		posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
 		this->m_cueBall.SetWorldMatrix(posOffset);
@@ -184,10 +199,10 @@ int BilliardState::Render(GraphicHandler * gHandler, HWND hwnd)
 	int result = 0;
 	result = 1;
 
+	gHandler->DeferredRender(&this->m_table, &this->myCamera);
+	gHandler->DeferredRender(&this->m_cueStick, &this->myCamera);
 	gHandler->DeferredRender(&this->m_cueBall, &this->myCamera);
 	gHandler->DeferredRender(&this->m_8Ball, &this->myCamera);
-	gHandler->DeferredRender(&this->m_cueStick, &this->myCamera);
-	gHandler->DeferredRender(&this->m_table, &this->myCamera);
 
 	gHandler->LightRender(this->myCamera.GetCameraPos(), this->pointLights);
 
