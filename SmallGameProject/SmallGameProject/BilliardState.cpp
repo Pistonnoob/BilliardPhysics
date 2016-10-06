@@ -31,8 +31,6 @@ void BilliardState::Shutdown()
 	this->m_cueStick.Shutdown();
 	this->m_table.Shutdown();
 
-	//delete this->billiardCatchers;
-
 	GameState::Shutdown();
 }
 
@@ -44,7 +42,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->simulationCompleted = true;
 	this->manualClearing = false;
 
-	/*this->billiardCatchers[0].radius = 6.5f;
+	this->billiardCatchers[0].radius = 6.5f;
 	this->billiardCatchers[1].radius = 6.5f;
 	this->billiardCatchers[2].radius = 10.0f;
 	this->billiardCatchers[3].radius = 10.0f;
@@ -62,7 +60,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[2].pos.z = -133.0f;
 	this->billiardCatchers[3].pos.z = -133.0f;
 	this->billiardCatchers[4].pos.z = 133.0f;
-	this->billiardCatchers[5].pos.z = 133.0f;*/
+	this->billiardCatchers[5].pos.z = 133.0f;
 
 	ID3D11Device* device = gHandler->GetDevice();
 	ID3D11DeviceContext* deviceContext = gHandler->GetDeviceContext();
@@ -115,13 +113,13 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 			result = 1;
 
 		//And the developer said "Let there be light!", and so light came to be
-		/*PointLight light;
+		PointLight light;
 		light.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Ambient = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Position = DirectX::XMFLOAT4(0.0f, 10.0f, 0.0f, 1.0f);
 		light.Attenuation = DirectX::XMFLOAT4(50.0f, 1.0f, 0.09f, 0.032f);
-		this->pointLights.push_back(light);*/
+		this->pointLights.push_back(light);
 
 	}
 

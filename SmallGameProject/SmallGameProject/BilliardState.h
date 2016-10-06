@@ -24,7 +24,7 @@ private:
 	const float GRAVITY = 9.82;
 	const float SCALING = 1.0f;
 
-	/*struct Ball {
+	struct Ball {
 		DirectX::XMFLOAT3 pos;
 		DirectX::XMFLOAT3 velocity;
 		float density;
@@ -36,9 +36,9 @@ private:
 		DirectX::XMFLOAT3 pos = DirectX::XMFLOAT3(0.0f, 3.0f, 0.0f);
 		float radius;
 		float height = 8.0f;
-	};*/
+	};
 
-	/*Catcher billiardCatchers[6];*/
+	Catcher billiardCatchers[6];
 
 public:
 	BilliardState();
