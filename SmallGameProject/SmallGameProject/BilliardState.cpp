@@ -169,26 +169,36 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 	}
 	else
 	{
-		//Update the balls
-
-		//Move the balls
-		this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.velocity.x * deltaTime,
-			this->activeBall.pos.y + this->activeBall.velocity.y * deltaTime,
-			this->activeBall.pos.z + this->activeBall.velocity.z * deltaTime);
-		for (int i = 0; i < OTHER_BALL_COUNT; i++)
+		//If the simulation of movement has yet to complete
+		//If the simulation is complete, all balls will be still
+		if (!this->simulationCompleted)
 		{
-			
-		}
-		//Check collisions
-			//Correct collisions
-				//transfer velocities
+			//Update the balls
 
-		//Set the positions of the ball models to be accurate
-		DirectX::XMMATRIX posOffset;
-		posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
-		this->m_cueBall.SetWorldMatrix(posOffset);
-		posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->otherBalls[0].pos));
-		this->m_8Ball.SetWorldMatrix(posOffset);
+			//Move the balls
+			this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.velocity.x * deltaTime,
+				this->activeBall.pos.y + this->activeBall.velocity.y * deltaTime,
+				this->activeBall.pos.z + this->activeBall.velocity.z * deltaTime);
+			for (int i = 0; i < OTHER_BALL_COUNT; i++)
+			{
+				this->otherBalls[i].pos = DirectX::XMFLOAT3(this->otherBalls[i].pos.x + this->otherBalls[i].velocity.x * deltaTime,
+					this->otherBalls[i].pos.y + this->otherBalls[i].velocity.y * deltaTime,
+					this->otherBalls[i].pos.z + this->otherBalls[i].velocity.z * deltaTime);
+			}
+			//Check collisions
+
+				//Correct collisions
+					//transfer velocities
+
+			//Check if no balls are moving.
+
+			//Set the positions of the ball models to be accurate
+			DirectX::XMMATRIX posOffset;
+			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
+			this->m_cueBall.SetWorldMatrix(posOffset);
+			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->otherBalls[0].pos));
+			this->m_8Ball.SetWorldMatrix(posOffset);
+		}
 	}
 
 	return result;
