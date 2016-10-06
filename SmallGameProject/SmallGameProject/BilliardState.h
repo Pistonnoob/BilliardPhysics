@@ -7,6 +7,9 @@ class BilliardState :
 	public GameState
 {
 private:
+
+	bool exitStage;
+
 	CameraHandler myCamera;
 
 	Model m_cueBall;

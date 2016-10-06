@@ -8,6 +8,7 @@
 #include <Windows.h>
 
 #include "StartState.h"
+#include "BilliardState.h"
 class GameStateHandler {
 
 private:

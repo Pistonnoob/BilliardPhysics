@@ -1,26 +1,20 @@
-﻿Build started 2016-10-04 12:27:44.
+﻿Build started 2016-10-06 14:09:06.
      1>Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp GameState.cpp GameStateHandler.cpp HubState.cpp main.cpp MenuState.cpp StageState.cpp StartState.cpp System.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp GameState.cpp GameStateHandler.cpp HubState.cpp MenuState.cpp StageState.cpp StartState.cpp System.cpp main.cpp
+         main.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          System.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\system.cpp(285): warning C4305: '=': truncation from 'double' to 'float'
          StartState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          StageState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(324): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(339): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(417): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
@@ -34,42 +28,94 @@
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(820): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
          MenuState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
-         main.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          HubState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          GameStateHandler.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          GameState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
          BilliardState.cpp
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(18): error C2086: 'CameraHandler BilliardState::myCamera': redefinition
-         c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(10): note: see declaration of 'BilliardState::myCamera'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(41): error C2275: 'BilliardState::Catcher': illegal use of this type as an expression
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
          Generating Code...
-     1>Done Building Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.lib" /MACHINE:X64 x64\Debug\Ability.obj
+         x64\Debug\Actor.obj
+         x64\Debug\Ai.obj
+         x64\Debug\Algorithm.obj
+         x64\Debug\ArcFire.obj
+         x64\Debug\AudioHandler.obj
+         x64\Debug\BilliardState.obj
+         x64\Debug\BomberEnemy.obj
+         x64\Debug\Boss.obj
+         x64\Debug\BoundingVolume.obj
+         x64\Debug\BoxBoundingVolume.obj
+         x64\Debug\CameraHandler.obj
+         x64\Debug\Command.obj
+         x64\Debug\D3DHandler.obj
+         x64\Debug\DeferredShaderHandler.obj
+         x64\Debug\EmitterClusterExplosion.obj
+         x64\Debug\EmitterEnemySpawn.obj
+         x64\Debug\EmitterExplosion.obj
+         x64\Debug\EmitterHolder.obj
+         x64\Debug\EmitterPlayerSpawn.obj
+         x64\Debug\EmitterPrototype.obj
+         x64\Debug\EmitterSpawnPulse.obj
+         x64\Debug\Enemy.obj
+         x64\Debug\Entity.obj
+         x64\Debug\EntitySubject.obj
+         x64\Debug\FireCommand.obj
+         x64\Debug\Font.obj
+         x64\Debug\FontShaderHandler.obj
+         x64\Debug\GameData.obj
+         x64\Debug\GameState.obj
+         x64\Debug\GameStateHandler.obj
+         x64\Debug\GraphicHandler.obj
+         x64\Debug\HubState.obj
+         x64\Debug\InputHandler.obj
+         x64\Debug\LightShaderHandler.obj
+         x64\Debug\main.obj
+         x64\Debug\MeleeEnemy.obj
+         x64\Debug\MenuState.obj
+         x64\Debug\Model.obj
+         x64\Debug\MoveDownCommand.obj
+         x64\Debug\MoveLeftCommand.obj
+         x64\Debug\MoveRightCommand.obj
+         x64\Debug\MoveUpCommand.obj
+         x64\Debug\Observer.obj
+         x64\Debug\Particle.obj
+         x64\Debug\ParticleEmitter.obj
+         x64\Debug\ParticleHandler.obj
+         x64\Debug\ParticleShaderHandler.obj
+         x64\Debug\Player.obj
+         x64\Debug\PowerUp.obj
+         x64\Debug\Projectile.obj
+         x64\Debug\ProjectileHandler.obj
+         x64\Debug\RangedEnemy.obj
+         x64\Debug\ReverseFire.obj
+         x64\Debug\ScreenQuad.obj
+         x64\Debug\ShadowShaderHandler.obj
+         x64\Debug\SoundHandler.obj
+         x64\Debug\SphereBoundingVolume.obj
+         x64\Debug\SplitFire.obj
+         x64\Debug\StageState.obj
+         x64\Debug\StartState.obj
+         x64\Debug\Subject.obj
+         x64\Debug\System.obj
+         x64\Debug\TestState.obj
+         x64\Debug\TextHandler.obj
+         x64\Debug\Texture.obj
+         x64\Debug\UIElement.obj
+         x64\Debug\UIHandler.obj
+         x64\Debug\UIShaderHandler.obj
+         x64\Debug\Weapon.obj
+         SmallGameProject.vcxproj -> C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe
+     1>Done Building Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:14.02
+Time Elapsed 00:00:21.87

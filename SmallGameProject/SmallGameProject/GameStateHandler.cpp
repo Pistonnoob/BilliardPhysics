@@ -35,9 +35,12 @@ void GameStateHandler::Shutdown()
 bool GameStateHandler::Initialize(GraphicHandler* gHandler)
 {
 	int result = 1;
-	StartState* startState = new StartState();
+	/*StartState* startState = new StartState();
 	startState->Initialize(gHandler, this);
-	this->m_gameStates.push_back(startState);
+	this->m_gameStates.push_back(startState);*/
+	BilliardState* billiardState = new BilliardState();
+	billiardState->Initialize(gHandler, this);
+	this->m_gameStates.push_back(billiardState);
 	return true;
 }
 

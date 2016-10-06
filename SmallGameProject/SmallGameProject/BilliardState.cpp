@@ -1,4 +1,5 @@
 #include "BilliardState.h"
+#include "GameStateHandler.h"
 
 
 
@@ -12,6 +13,7 @@ BilliardState::BilliardState()
 	this->m_table = Model();
 
 	this->simulationCompleted = true;
+	this->exitStage = false;
 	
 
 }
@@ -33,6 +35,8 @@ void BilliardState::Shutdown()
 int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 {
 	int result = 0;
+
+	this->exitStage = false;
 	this->simulationCompleted = true;
 
 	this->billiardCatchers[0].radius = 6.5f;
@@ -110,7 +114,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 		light.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Ambient = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-		light.Position = DirectX::XMFLOAT4(0.0f, 0.0f, -10.0f, 1.0f);
+		light.Position = DirectX::XMFLOAT4(0.0f, 10.0f, 0.0f, 1.0f);
 		light.Attenuation = DirectX::XMFLOAT4(50.0f, 1.0f, 0.09f, 0.032f);
 		this->pointLights.push_back(light);
 
@@ -121,15 +125,42 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 
 int BilliardState::HandleInput(InputHandler * input)
 {
-	return 0;
+	int result = 1;
+
+	if (input->isKeyPressed(DIK_ESCAPE))
+		this->exitStage = true;
+	
+	return result;
 }
 
 int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler * gHandler)
 {
-	return 0;
+	int result = 0;
+	result = 1;
+
+	if (this->exitStage)
+	{
+		this->exitStage = false;
+		GameState* state = this->m_GSH->PopState();
+		//We do not care about the returned state but check if return
+		if (state)
+		{
+			//The state wasn't a nullptr, meaning it didn't have automatic clearing on
+			//Something went somewhat wrong here eh?
+		}
+	}
+
+	return result;
 }
 
 int BilliardState::Render(GraphicHandler * gHandler, HWND hwnd)
 {
-	return 0;
+	int result = 0;
+	result = 1;
+
+
+
+
+
+	return result;
 }
