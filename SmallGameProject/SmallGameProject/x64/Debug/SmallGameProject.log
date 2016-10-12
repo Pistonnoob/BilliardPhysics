@@ -1,12 +1,12 @@
-﻿Build started 2016-10-06 16:23:07.
+﻿Build started 2016-10-12 18:06:44.
      1>Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp
+         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp
          BilliardState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.h(24): warning C4305: 'initializing': truncation from 'double' to 'const float'
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.lib" /MACHINE:X64 x64\Debug\Ability.obj
+         E:\Program Files (x86)\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.lib" /MACHINE:X64 x64\Debug\Ability.obj
          x64\Debug\Actor.obj
          x64\Debug\Ai.obj
          x64\Debug\Algorithm.obj
@@ -81,4 +81,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.18
+Time Elapsed 00:00:02.02
