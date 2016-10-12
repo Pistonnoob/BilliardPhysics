@@ -64,7 +64,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 
 	this->activeBall.pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 0.0f * SCALING);
 	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-	this->activeBall.radius = 0.0476f;
+	this->activeBall.radius = 0.0476f * SCALING;
 	this->activeBall.mass = 0.17f;
 	this->activeBall.density = 1700;
 
@@ -72,7 +72,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	{
 		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 1.0f * SCALING);
 		this->otherBalls[i].direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-		this->otherBalls[i].radius = 0.0508f;
+		this->otherBalls[i].radius = 0.0508f * SCALING;
 		this->otherBalls[i].mass = 0.16f;
 		this->otherBalls[i].density = 1700;
 	}
@@ -135,7 +135,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 		light.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Ambient = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 		light.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-		light.Position = DirectX::XMFLOAT4(0.0f, 20.0f, -4.0f, 1.0f);
+		light.Position = DirectX::XMFLOAT4(0.0f, 1.0f * SCALING, 0.0f, 1.0f);
 		light.Attenuation = DirectX::XMFLOAT4(50.0f, 1.0f, 0.09f, 0.032f);
 		this->pointLights.push_back(light);
 
@@ -207,20 +207,26 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Set the positions of the ball models to be accurate
 			DirectX::XMMATRIX posOffset;
 			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
-			
+			posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
 			this->m_cueBall.SetWorldMatrix(posOffset);
 			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->otherBalls[0].pos));
 			//posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
+			posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
 			this->m_8Ball.SetWorldMatrix(posOffset);
 		}
 		else
 		{
 			//If the balls are all stationary, prepare for another shot from the active ball
-			//Check the mouse position compared to the ball center
-			//Use that data to calculate a direction matrix to use for the ball
-			//Set the power of the ball
-			//Start simulating ball movement again
-			this->simulationCompleted = false;
+			//Check for a mouse right click
+			if (input->isMouseKeyReleased(0))
+			{
+
+				//Check the mouse position compared to the ball center
+				//Use that data to calculate a direction matrix to use for the ball
+				//Set the power of the ball
+				//Start simulating ball movement again
+				this->simulationCompleted = false;
+			}
 		}
 	}
 

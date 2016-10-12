@@ -1,4 +1,4 @@
-﻿Build started 2016-10-12 18:06:44.
+﻿Build started 2016-10-12 18:55:30.
      1>Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp
@@ -81,4 +81,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.02
+Time Elapsed 00:00:02.18
