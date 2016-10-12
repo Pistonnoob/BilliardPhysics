@@ -22,14 +22,16 @@ private:
 	const float PI = DirectX::XM_PI;
 	const float FRICTIONCOEFFICIENT_BETWEEN_BALL_AND_VELVET = 0.005f;
 	const float GRAVITY = 9.82;
-	const float SCALING = 1.0f;
+	//const float SCALING = 1.0f;
+	const float SCALING = 0.0476f / 4.0f;
 	const float BOARD_WIDTH = 2.4f;
 	const float BOARD_HEIGHT = BOARD_WIDTH / 2;
 	const int OTHER_BALL_COUNT = 1;
 
 	struct Ball {
 		DirectX::XMFLOAT3 pos;
-		DirectX::XMFLOAT3 velocity;
+		DirectX::XMFLOAT3 direction;
+		float power;
 		float density;
 		float mass;
 		float radius;
