@@ -27,6 +27,7 @@ BilliardState::~BilliardState()
 
 void BilliardState::Shutdown()
 {
+	//Release the models
 	this->m_cueBall.Shutdown();
 	this->m_8Ball.Shutdown();
 	this->m_cueStick.Shutdown();
@@ -65,7 +66,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 
 	this->activeBall.pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 0.0f * SCALING);
 	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-	this->activeBall.radius = 0.0476f * SCALING;
+	this->activeBall.radius = 0.0476f;
 	this->activeBall.mass = 0.17f;
 	this->activeBall.density = 1700;
 
@@ -73,7 +74,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	{
 		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 1.0f * SCALING);
 		this->otherBalls[i].direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-		this->otherBalls[i].radius = 0.0508f * SCALING;
+		this->otherBalls[i].radius = 0.0508f;
 		this->otherBalls[i].mass = 0.16f;
 		this->otherBalls[i].density = 1700;
 	}
