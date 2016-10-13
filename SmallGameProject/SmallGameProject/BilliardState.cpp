@@ -1,5 +1,6 @@
 #include "BilliardState.h"
 #include "GameStateHandler.h"
+#include <math.h>
 
 
 
@@ -158,6 +159,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 {
 	int result = 0;
 	result = 1;
+	deltaTime = deltaTime / 1000000.0f;
 
 	if (this->exitStage)
 	{
@@ -179,29 +181,89 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Update the balls
 
 			//Move the balls
+#pragma region
+			//Moving the active ball
 			this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.direction.x * this->activeBall.power * deltaTime,
 				this->activeBall.pos.y + this->activeBall.direction.y * this->activeBall.power * this->activeBall.power * deltaTime,
 				this->activeBall.pos.z + this->activeBall.direction.z * this->activeBall.power * deltaTime);
+			//Moving the other balls
 			for (int i = 0; i < OTHER_BALL_COUNT; i++)
 			{
-				this->otherBalls[i].pos = DirectX::XMFLOAT3(this->otherBalls[i].pos.x + this->otherBalls[i].direction.x * this->activeBall.power * deltaTime,
-					this->otherBalls[i].pos.y + this->otherBalls[i].direction.y * this->activeBall.power * deltaTime,
-					this->otherBalls[i].pos.z + this->otherBalls[i].direction.z * this->activeBall.power * deltaTime);
+				if (this->ballState[i] > 0)
+				{
+					this->otherBalls[i].pos = DirectX::XMFLOAT3(this->otherBalls[i].pos.x + this->otherBalls[i].direction.x * this->activeBall.power * deltaTime,
+						this->otherBalls[i].pos.y + this->otherBalls[i].direction.y * this->activeBall.power * deltaTime,
+						this->otherBalls[i].pos.z + this->otherBalls[i].direction.z * this->activeBall.power * deltaTime);
+				}
 			}
-			//Check collisions
+#pragma endregion Moving the balls
+			//Check balls within catchers
+#pragma region
+			//Check cueball
+			bool cueBallCaught = false;
+			for (int i = 0; i < CATCHER_COUNT && !cueBallCaught; i++)
+			{
+				//Calculate distance from catcher center to ball center
+				float distance = sqrtf(pow(this->billiardCatchers[i].pos.x - this->activeBall.pos.x, 2) + pow(this->billiardCatchers[i].pos.z - this->activeBall.pos.z, 2));
+				//Check if cueball is inside cather
+				if (distance <= abs(this->billiardCatchers[i].radius - this->activeBall.radius))
+				{
+					//Cueball is inside catcher
+					cueBallCaught = true;
+				}
+			}
+			//Check other balls
+			for (int ballIndex = 0; ballIndex < this->OTHER_BALL_COUNT; ballIndex++)
+			{
+				for (int catcherIndex = 0; catcherIndex < this->CATCHER_COUNT && this->ballState[ballIndex] > 0; catcherIndex++)
+				{
+					//Calculate distance from catcher center to ball center
+					float distance = sqrtf(pow(this->billiardCatchers[catcherIndex].pos.x - this->otherBalls[ballIndex].pos.x, 2) + pow(this->billiardCatchers[catcherIndex].pos.z - this->otherBalls[ballIndex].pos.z, 2));
+					//Check if ball is inside cather
+					if (distance <= abs(this->billiardCatchers[catcherIndex].radius - this->otherBalls[ballIndex].radius))
+					{
+						//Set the ball state as CAUGHT = 0
+						this->ballState[ballIndex] = 0;
+					}
+				}
+			}
+#pragma endregion Check balls within catchers
+			//Check collisions with walls
+#pragma region
+			//Check cueball
+			if (this->activeBall.pos.x - this->activeBall.radius < -BOARD_HEIGHT)
+			{
 
-				//Correct collisions
-					//transfer velocities
+			}
+			else if (this->activeBall.pos.x + this->activeBall.radius > BOARD_HEIGHT)
+			{
+
+			}
+			if (this->activeBall.pos.z - this->activeBall.radius < -BOARD_WIDTH)
+			{
+
+			}
+			else if (this->activeBall.pos.z + this->activeBall.radius > BOARD_WIDTH)
+			{
+
+			}
+			//Check other balls
+#pragma endregion Check collisions with walls
+			//Check collisions between balls
+#pragma region
+#pragma endregion Check collisions between balls
+			//Correct collisions
+			//transfer velocities
 
 			//Check if no balls are moving.
 			bool ballMoving = false;
-			if (this->activeBall.power > 0.000001f)
+			if (this->activeBall.power > 0.000000001f)
 			{
 				ballMoving = true;
 			}
 			for (int i = 0; i < OTHER_BALL_COUNT && !ballMoving; i++)
 			{
-				ballMoving = this->otherBalls[i].power > 0.000001f;
+				ballMoving = this->otherBalls[i].power > 0.000000001f;
 			}
 			this->simulationCompleted = !ballMoving;
 			//Set the positions of the ball models to be accurate
@@ -220,8 +282,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Check for a mouse right click
 			if (input->isMouseKeyReleased(0))
 			{
-
 				//Check the mouse position compared to the ball center
+				float xPos = 0.0f, yPos = 0.0f;
 				//Use that data to calculate a direction matrix to use for the ball
 				//Set the power of the ball
 				//Start simulating ball movement again

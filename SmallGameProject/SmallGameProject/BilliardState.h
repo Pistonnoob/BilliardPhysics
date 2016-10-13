@@ -21,12 +21,13 @@ private:
 	bool simulationCompleted;
 	const float PI = DirectX::XM_PI;
 	const float FRICTIONCOEFFICIENT_BETWEEN_BALL_AND_VELVET = 0.005f;
-	const float GRAVITY = 9.82;
+	const float GRAVITY = 9.82f;
 	//const float SCALING = 1.0f;
 	const float SCALING = 0.0476f / 4.0f;
 	const float BOARD_WIDTH = 2.4f;
 	const float BOARD_HEIGHT = BOARD_WIDTH / 2;
-	const int OTHER_BALL_COUNT = 1;
+	static const int OTHER_BALL_COUNT = 1;
+	static const int CATCHER_COUNT = 6;
 
 	struct Ball {
 		DirectX::XMFLOAT3 pos;
@@ -43,10 +44,12 @@ private:
 		float height = 8.0f;
 	};
 
-	Catcher billiardCatchers[6];
+	Catcher billiardCatchers[CATCHER_COUNT];
 
 	Ball activeBall;
-	Ball otherBalls[1];
+	Ball otherBalls[OTHER_BALL_COUNT];
+	//0 = caught. 1 = in play.
+	int ballState[OTHER_BALL_COUNT];
 
 
 public:
