@@ -41,7 +41,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	int result = 0;
 
 	this->exitStage = false;
-	this->simulationCompleted = true;
+	this->simulationCompleted = false;
 	this->manualClearing = false;
 
 	this->billiardCatchers[0].radius = 6.5f * SCALING;
@@ -64,17 +64,17 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[4].pos.z = 133.0f * SCALING;
 	this->billiardCatchers[5].pos.z = 133.0f * SCALING;
 
-	this->activeBall.pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 0.0f * SCALING);
+	this->activeBall.pos = DirectX::XMFLOAT3(0.0f * SCALING, 4.0f * SCALING, 0.0f * SCALING);
 	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-	this->activeBall.radius = 0.0476f;
+	this->activeBall.radius = 4.0f * SCALING;
 	this->activeBall.mass = 0.17f;
 	this->activeBall.density = 1700;
 
 	for (int i = 0; i < OTHER_BALL_COUNT; i++)
 	{
-		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f * SCALING, 1.0f * SCALING, 1.0f * SCALING);
+		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f * SCALING, 4.2689f * SCALING, 1.0f * SCALING);
 		this->otherBalls[i].direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
-		this->otherBalls[i].radius = 0.0508f;
+		this->otherBalls[i].radius = 4.2689f * SCALING;
 		this->otherBalls[i].mass = 0.16f;
 		this->otherBalls[i].density = 1700;
 	}
