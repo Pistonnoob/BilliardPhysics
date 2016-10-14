@@ -144,10 +144,10 @@ bool GraphicHandler::initialize(HWND* hwnd, int screenWidth, int screenHeight, D
 
 	this->engine->GetDevice()->CreateBlendState(&blendDesc, &this->textTransparencyBlendState);
 
-	this->dirLight.Diffuse = DirectX::XMFLOAT4(0.32f, 0.32f, 0.47f, 1.0f);
-	this->dirLight.Ambient = DirectX::XMFLOAT4(0.32f, 0.32f, 0.47f , 1.0f);
-	this->dirLight.Specular = DirectX::XMFLOAT4(0.32f, 0.32f, 0.47f, 1.0f);
-	this->dirLight.Direction = DirectX::XMFLOAT4(-0.5f, -0.5f, -0.5f, 0.0f);
+	this->dirLight.Diffuse = DirectX::XMFLOAT4(0.50f, 0.50f, 0.50f, 1.0f);
+	this->dirLight.Ambient = DirectX::XMFLOAT4(0.50f, 0.50f, 0.50f , 1.0f);
+	this->dirLight.Specular = DirectX::XMFLOAT4(0.50f, 0.50f, 0.50f, 1.0f);
+	this->dirLight.Direction = DirectX::XMFLOAT4(0.0f, -1.0f, 0.0f, 0.0f);
 
 	//creating the light matrises
 	fieldOfView = (float)DirectX::XM_PI / 2.0f;
