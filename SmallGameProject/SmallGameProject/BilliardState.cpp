@@ -234,25 +234,80 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Check cueball
 			if (this->activeBall.pos.x - this->activeBall.radius < -BOARD_HEIGHT)
 			{
-
+				//Change direction
+				DirectX::XMMatrixScaling(-1.0f, 1.0f, 1.0f);
+				this->activeBall.direction.x *= -1;
+				//Fix collision
+				this->activeBall.pos.x = -BOARD_HEIGHT + this->activeBall.radius;
 			}
 			else if (this->activeBall.pos.x + this->activeBall.radius > BOARD_HEIGHT)
 			{
-
+				//Change direction
+				DirectX::XMMatrixScaling(-1.0f, 1.0f, 1.0f);
+				this->activeBall.direction.x *= -1;
+				//Fix collision
+				this->activeBall.pos.x = BOARD_HEIGHT - this->activeBall.radius;
 			}
 			if (this->activeBall.pos.z - this->activeBall.radius < -BOARD_WIDTH)
 			{
-
+				//Change direction
+				DirectX::XMMatrixScaling(1.0f, 1.0f, -1.0f);
+				this->activeBall.direction.z *= -1;
+				//Fix collision
+				this->activeBall.pos.z = -BOARD_WIDTH + this->activeBall.radius;
 			}
 			else if (this->activeBall.pos.z + this->activeBall.radius > BOARD_WIDTH)
 			{
-
+				//Change direction
+				DirectX::XMMatrixScaling(1.0f, 1.0f, -1.0f);
+				this->activeBall.direction.z *= -1;
+				//Fix collision
+				this->activeBall.pos.z = BOARD_WIDTH - this->activeBall.radius;
 			}
+
 			//Check other balls
+			for (int ballIndex = 0; ballIndex < OTHER_BALL_COUNT; ballIndex++)
+			{
+				//Don't update caught balls
+				if (this->ballState[ballIndex] > 0)
+				{
+					if (this->otherBalls[ballIndex].pos.x - this->otherBalls[ballIndex].radius < -BOARD_HEIGHT)
+					{
+						//Change direction
+						DirectX::XMMatrixScaling(-1.0f, 1.0f, 1.0f);
+						this->otherBalls[ballIndex].direction.x *= -1;
+						//Fix collision
+						this->otherBalls[ballIndex].pos.x = -BOARD_HEIGHT + this->otherBalls[ballIndex].radius;
+					}
+					else if (this->otherBalls[ballIndex].pos.x + this->otherBalls[ballIndex].radius > BOARD_HEIGHT)
+					{
+						//Change direction
+						DirectX::XMMatrixScaling(-1.0f, 1.0f, 1.0f);
+						this->otherBalls[ballIndex].direction.x *= -1;
+						//Fix collision
+						this->otherBalls[ballIndex].pos.x = BOARD_HEIGHT - this->otherBalls[ballIndex].radius;
+					}
+					if (this->otherBalls[ballIndex].pos.z - this->otherBalls[ballIndex].radius < -BOARD_WIDTH)
+					{
+						//Change direction
+						DirectX::XMMatrixScaling(1.0f, 1.0f, -1.0f);
+						this->otherBalls[ballIndex].direction.z *= -1;
+						//Fix collision
+						this->otherBalls[ballIndex].pos.z = -BOARD_WIDTH + this->otherBalls[ballIndex].radius;
+					}
+					else if (this->otherBalls[ballIndex].pos.z + this->otherBalls[ballIndex].radius > BOARD_WIDTH)
+					{
+						//Change direction
+						DirectX::XMMatrixScaling(1.0f, 1.0f, -1.0f);
+						this->otherBalls[ballIndex].direction.z *= -1;
+						//Fix collision
+						this->otherBalls[ballIndex].pos.z = BOARD_WIDTH - this->otherBalls[ballIndex].radius;
+					}
+				}
+			}
 #pragma endregion Check collisions with walls
 			//Check collisions between balls
 #pragma region
-
 #pragma endregion Check collisions between balls
 			//Correct collisions
 			//Transfer velocities
