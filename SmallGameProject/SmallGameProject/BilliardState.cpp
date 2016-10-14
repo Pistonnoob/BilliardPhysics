@@ -308,6 +308,13 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 #pragma endregion Check collisions with walls
 			//Check collisions between balls
 #pragma region
+			for (int i = 0; i < this->OTHER_BALL_COUNT; i++)
+			{
+				if (sqrtf(pow(this->activeBall.pos.x - this->otherBalls[i].pos.x, 2) + pow(this->activeBall.pos.z - this->otherBalls[i].pos.z, 2)) < this->activeBall.radius + this->otherBalls[i].radius)
+				{
+					//Collision between active ball and other ball
+				}
+			}
 #pragma endregion Check collisions between balls
 			//Correct collisions
 			//Transfer velocities
