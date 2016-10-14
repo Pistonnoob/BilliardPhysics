@@ -64,7 +64,7 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[4].pos.z = 133.0f * SCALING;
 	this->billiardCatchers[5].pos.z = 133.0f * SCALING;
 
-	this->activeBall.pos = DirectX::XMFLOAT3(0.0f * SCALING, 4.0f * SCALING, 0.0f * SCALING);
+	this->activeBall.pos = DirectX::XMFLOAT3(10.0f * SCALING, 4.0f * SCALING, 0.0f * SCALING);
 	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
 	this->activeBall.radius = 4.0f * SCALING;
 	this->activeBall.mass = 0.17f;
@@ -252,9 +252,14 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 #pragma endregion Check collisions with walls
 			//Check collisions between balls
 #pragma region
+
 #pragma endregion Check collisions between balls
 			//Correct collisions
-			//transfer velocities
+			//Transfer velocities
+
+			//Apply friction
+			//Calculate normalforce
+			float fN = GRAVITY * this->activeBall.mass;
 
 			//Check if no balls are moving.
 			bool ballMoving = false;
@@ -269,11 +274,10 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			this->simulationCompleted = !ballMoving;
 			//Set the positions of the ball models to be accurate
 			DirectX::XMMATRIX posOffset;
-			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->activeBall.pos));
+			posOffset = DirectX::XMMatrixTranslation(this->activeBall.pos.x / SCALING, this->activeBall.pos.y / SCALING, this->activeBall.pos.z / SCALING);
 			posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
 			this->m_cueBall.SetWorldMatrix(posOffset);
-			posOffset = DirectX::XMMatrixTranslationFromVector(DirectX::XMLoadFloat3(&this->otherBalls[0].pos));
-			//posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
+			posOffset = DirectX::XMMatrixTranslation(this->otherBalls[0].pos.x / SCALING, this->otherBalls[0].pos.y / SCALING, this->otherBalls[0].pos.z / SCALING);
 			posOffset = DirectX::XMMatrixMultiply(posOffset, DirectX::XMMatrixScaling(SCALING, SCALING, SCALING));
 			this->m_8Ball.SetWorldMatrix(posOffset);
 		}
