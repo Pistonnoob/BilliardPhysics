@@ -25,9 +25,11 @@ private:
 	//const float SCALING = 1.0f;
 	const float CUEBALL_RADIUS = 0.0476f;
 	const float OTHERBALL_RADIUS = 0.0508f;
+	//const float OTHERBALL_RADIUS = 0.0508f;
 	const float SCALING = CUEBALL_RADIUS / 4.0f;
 	const float BOARD_WIDTH = 2.4f * SCALING;
 	const float BOARD_HEIGHT = BOARD_WIDTH / 2;
+	const float ELASTICITY = 1.0f;
 	static const int OTHER_BALL_COUNT = 1;
 	static const int CATCHER_COUNT = 6;
 
@@ -52,8 +54,6 @@ private:
 	Ball otherBalls[OTHER_BALL_COUNT];
 	//0 = caught. 1 = in play.
 	int ballState[OTHER_BALL_COUNT];
-
-
 public:
 	BilliardState();
 	~BilliardState();

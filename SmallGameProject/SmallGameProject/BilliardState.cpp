@@ -230,6 +230,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			}
 #pragma endregion Check balls within catchers
 			//Check collisions with walls
+			//WARNING this does not take cathers into account, need to change the algorithm to allow cathers
 #pragma region
 			//Check cueball
 			if (this->activeBall.pos.x - this->activeBall.radius < -BOARD_HEIGHT)
@@ -239,6 +240,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				this->activeBall.direction.x *= -1;
 				//Fix collision
 				this->activeBall.pos.x = -BOARD_HEIGHT + this->activeBall.radius;
+				//Apply 5% velocity transfer to table
+				this->activeBall.power *= 0.95f;
 			}
 			else if (this->activeBall.pos.x + this->activeBall.radius > BOARD_HEIGHT)
 			{
@@ -247,6 +250,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				this->activeBall.direction.x *= -1;
 				//Fix collision
 				this->activeBall.pos.x = BOARD_HEIGHT - this->activeBall.radius;
+				//Apply 5% velocity transfer to table
+				this->activeBall.power *= 0.95f;
 			}
 			if (this->activeBall.pos.z - this->activeBall.radius < -BOARD_WIDTH)
 			{
@@ -255,6 +260,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				this->activeBall.direction.z *= -1;
 				//Fix collision
 				this->activeBall.pos.z = -BOARD_WIDTH + this->activeBall.radius;
+				//Apply 5% velocity transfer to table
+				this->activeBall.power *= 0.95f;
 			}
 			else if (this->activeBall.pos.z + this->activeBall.radius > BOARD_WIDTH)
 			{
@@ -263,6 +270,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				this->activeBall.direction.z *= -1;
 				//Fix collision
 				this->activeBall.pos.z = BOARD_WIDTH - this->activeBall.radius;
+				//Apply 5% velocity transfer to table
+				this->activeBall.power *= 0.95f;
 			}
 
 			//Check other balls
@@ -278,6 +287,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						this->otherBalls[ballIndex].direction.x *= -1;
 						//Fix collision
 						this->otherBalls[ballIndex].pos.x = -BOARD_HEIGHT + this->otherBalls[ballIndex].radius;
+						//Apply 5% velocity transfer to table
+						this->activeBall.power *= 0.95f;
 					}
 					else if (this->otherBalls[ballIndex].pos.x + this->otherBalls[ballIndex].radius > BOARD_HEIGHT)
 					{
@@ -286,6 +297,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						this->otherBalls[ballIndex].direction.x *= -1;
 						//Fix collision
 						this->otherBalls[ballIndex].pos.x = BOARD_HEIGHT - this->otherBalls[ballIndex].radius;
+						//Apply 5% velocity transfer to table
+						this->activeBall.power *= 0.95f;
 					}
 					if (this->otherBalls[ballIndex].pos.z - this->otherBalls[ballIndex].radius < -BOARD_WIDTH)
 					{
@@ -294,6 +307,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						this->otherBalls[ballIndex].direction.z *= -1;
 						//Fix collision
 						this->otherBalls[ballIndex].pos.z = -BOARD_WIDTH + this->otherBalls[ballIndex].radius;
+						//Apply 5% velocity transfer to table
+						this->activeBall.power *= 0.95f;
 					}
 					else if (this->otherBalls[ballIndex].pos.z + this->otherBalls[ballIndex].radius > BOARD_WIDTH)
 					{
@@ -302,6 +317,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						this->otherBalls[ballIndex].direction.z *= -1;
 						//Fix collision
 						this->otherBalls[ballIndex].pos.z = BOARD_WIDTH - this->otherBalls[ballIndex].radius;
+						//Apply 5% velocity transfer to table
+						this->activeBall.power *= 0.95f;
 					}
 				}
 			}
@@ -310,9 +327,26 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 #pragma region
 			for (int i = 0; i < this->OTHER_BALL_COUNT; i++)
 			{
-				if (sqrtf(pow(this->activeBall.pos.x - this->otherBalls[i].pos.x, 2) + pow(this->activeBall.pos.z - this->otherBalls[i].pos.z, 2)) < this->activeBall.radius + this->otherBalls[i].radius)
+				if (this->ballState[i] > 0)
 				{
-					//Collision between active ball and other ball
+					if (sqrtf(pow(this->activeBall.pos.x - this->otherBalls[i].pos.x, 2) + pow(this->activeBall.pos.z - this->otherBalls[i].pos.z, 2)) < this->activeBall.radius + this->otherBalls[i].radius)
+					{
+						//Collision between active ball and other ball
+						float collisionPointX = 0.0f, collisionPointZ = 0.0f;
+						collisionPointX = ((this->otherBalls[i].pos.x * this->activeBall.radius) + (this->activeBall.pos.x * this->otherBalls[i].radius)) / (this->otherBalls[i].radius + this->activeBall.radius);
+						collisionPointZ = ((this->otherBalls[i].pos.z * this->activeBall.radius) + (this->activeBall.pos.z * this->otherBalls[i].radius)) / (this->otherBalls[i].radius + this->activeBall.radius);
+					}
+					for (int j = i; j < this->OTHER_BALL_COUNT; j++)
+					{
+						if (this->ballState[j] > 0)
+						{
+							//Between other balls
+							if (sqrtf(pow(this->otherBalls[j].pos.x - this->otherBalls[i].pos.x, 2) + pow(this->otherBalls[j].pos.z - this->otherBalls[i].pos.z, 2)) < this->otherBalls[j].radius + this->otherBalls[i].radius)
+							{
+								//Collision between other balls
+							}
+						}
+					}
 				}
 			}
 #pragma endregion Check collisions between balls
