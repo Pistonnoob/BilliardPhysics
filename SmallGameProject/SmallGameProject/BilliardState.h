@@ -20,19 +20,23 @@ private:
 
 	bool simulationCompleted;
 	const float PI = DirectX::XM_PI;
-	const float FRICTIONCOEFFICIENT_BETWEEN_BALL_AND_VELVET = 0.005f;
+	const float FRICTIONCOEFFICIENT_BETWEEN_BALL_AND_VELVET = 0.2f;
 	const float GRAVITY = 9.82f;
 	//const float SCALING = 1.0f;
 	const float CUEBALL_RADIUS = 0.0476f;
 	const float OTHERBALL_RADIUS = 0.0508f;
 	//const float OTHERBALL_RADIUS = 0.0508f;
 	const float SCALING = CUEBALL_RADIUS / 4.0f;
-	const float BOARD_WIDTH = 2.4f * SCALING;
-	const float BOARD_HEIGHT = BOARD_WIDTH / 2;
-	const float ELASTICITY = 1.0f;
+	//The width it SHOULD be
+	//const float BOARD_WIDTH = 2.4f;
+	//The width of the board model.... it is wrong I know... shh
+	const float BOARD_WIDTH = 266.0f * SCALING;
+	//const float BOARD_HEIGHT = BOARD_WIDTH / 2;
+	const float BOARD_HEIGHT = 140.0f * SCALING;
 	static const int OTHER_BALL_COUNT = 1;
 	static const int CATCHER_COUNT = 6;
-
+	const float COLLISION_RESTITUTION = 0.9f;
+	const float NOT_MOVING_FLOAT = 0.000001f;
 	struct Ball {
 		DirectX::XMFLOAT3 pos;
 		DirectX::XMFLOAT3 direction;

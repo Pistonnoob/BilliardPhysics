@@ -1,9 +1,41 @@
-﻿Build started 2016-10-13 16:53:55.
+﻿Build started 2016-10-17 21:19:06.
      1>Project "C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\SmallGameProject\SmallGameProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp
+         E:\Program Files (x86)\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt BilliardState.cpp GameState.cpp GameStateHandler.cpp HubState.cpp MenuState.cpp StageState.cpp StartState.cpp System.cpp main.cpp
+         main.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         System.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\system.cpp(285): warning C4305: '=': truncation from 'double' to 'float'
+         StartState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         StageState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(324): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(339): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(417): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(772): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(793): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(803): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(804): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(808): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(812): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(816): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\stagestate.cpp(820): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         MenuState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         HubState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         GameStateHandler.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         GameState.cpp
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
          BilliardState.cpp
      1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\emitterexplosion.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kim\documents\github\billiardphysics\smallgameproject\smallgameproject\billiardstate.cpp(536): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+         Generating Code...
        Link:
          E:\Program Files (x86)\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kim\Documents\GitHub\BilliardPhysics\SmallGameProject\x64\Debug\SmallGameProject.lib" /MACHINE:X64 x64\Debug\Ability.obj
          x64\Debug\Actor.obj
@@ -80,4 +112,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.62
+Time Elapsed 00:00:19.16
