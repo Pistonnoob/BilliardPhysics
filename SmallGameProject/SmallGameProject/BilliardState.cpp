@@ -69,8 +69,8 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->billiardCatchers[4].pos.z = 133.0f * SCALING;
 	this->billiardCatchers[5].pos.z = 133.0f * SCALING;
 
-	this->activeBall.pos = DirectX::XMFLOAT3(CUEBALL_RADIUS + OTHERBALL_RADIUS - 0.1f, 4.0f * SCALING, -0.5f);
-	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 2.80f);
+	this->activeBall.pos = DirectX::XMFLOAT3(CUEBALL_RADIUS + OTHERBALL_RADIUS - 0.01f, 4.0f * SCALING, -0.5f);
+	this->activeBall.direction = DirectX::XMFLOAT3(0.0f, 0.0f, 4.00f);
 	this->activeBall.radius = 4.0f * SCALING;
 	this->activeBall.mass = 0.17f;
 	this->activeBall.density = 1700;
