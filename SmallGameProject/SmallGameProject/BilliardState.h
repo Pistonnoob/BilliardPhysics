@@ -35,12 +35,11 @@ private:
 	const float BOARD_HEIGHT = 140.0f * SCALING;
 	static const int OTHER_BALL_COUNT = 1;
 	static const int CATCHER_COUNT = 6;
-	const float COLLISION_RESTITUTION = 0.9f;
+	const float COLLISION_RESTITUTION = 0.95f;
 	const float NOT_MOVING_FLOAT = 0.000001f;
 	struct Ball {
 		DirectX::XMFLOAT3 pos;
 		DirectX::XMFLOAT3 direction;
-		float power;
 		float density;
 		float mass;
 		float radius;

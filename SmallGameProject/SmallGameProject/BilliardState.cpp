@@ -74,16 +74,14 @@ int BilliardState::Initialize(GraphicHandler * gHandler, GameStateHandler * GSH)
 	this->activeBall.radius = 4.0f * SCALING;
 	this->activeBall.mass = 0.17f;
 	this->activeBall.density = 1700;
-	this->activeBall.power = 1.0f;
 
 	for (int i = 0; i < OTHER_BALL_COUNT; i++)
 	{
-		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f * SCALING, 4.2689f * SCALING, 10.0f * SCALING);
+		this->otherBalls[i].pos = DirectX::XMFLOAT3(0.0f, 4.2689f * SCALING, 0.0f);
 		this->otherBalls[i].direction = DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f);
 		this->otherBalls[i].radius = 4.2689f * SCALING;
 		this->otherBalls[i].mass = 0.16f;
 		this->otherBalls[i].density = 1700;
-		this->otherBalls[i].power = 1.0f;
 	}
 
 	ID3D11Device* device = gHandler->GetDevice();
@@ -191,17 +189,17 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 			//Move the balls
 #pragma region
 			//Moving the active ball
-			this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.direction.x * this->activeBall.power * deltaTime,
-				this->activeBall.pos.y + this->activeBall.direction.y * this->activeBall.power * this->activeBall.power * deltaTime,
-				this->activeBall.pos.z + this->activeBall.direction.z * this->activeBall.power * deltaTime);
+			this->activeBall.pos = DirectX::XMFLOAT3(this->activeBall.pos.x + this->activeBall.direction.x * deltaTime,
+				this->activeBall.pos.y + this->activeBall.direction.y * deltaTime,
+				this->activeBall.pos.z + this->activeBall.direction.z * deltaTime);
 			//Moving the other balls
 			for (int i = 0; i < OTHER_BALL_COUNT; i++)
 			{
 				if (this->ballState[i] > 0)
 				{
-					this->otherBalls[i].pos = DirectX::XMFLOAT3(this->otherBalls[i].pos.x + this->otherBalls[i].direction.x * this->activeBall.power * deltaTime,
-						this->otherBalls[i].pos.y + this->otherBalls[i].direction.y * this->activeBall.power * deltaTime,
-						this->otherBalls[i].pos.z + this->otherBalls[i].direction.z * this->activeBall.power * deltaTime);
+					this->otherBalls[i].pos = DirectX::XMFLOAT3(this->otherBalls[i].pos.x + this->otherBalls[i].direction.x * deltaTime,
+						this->otherBalls[i].pos.y + this->otherBalls[i].direction.y * deltaTime,
+						this->otherBalls[i].pos.z + this->otherBalls[i].direction.z * deltaTime);
 				}
 			}
 #pragma endregion Moving the balls
@@ -248,7 +246,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				//Fix collision
 				this->activeBall.pos.x = -BOARD_HEIGHT / 2 + this->activeBall.radius;
 				//Apply 5% velocity transfer to table
-				this->activeBall.power *= 0.95f;
+				DirectX::XMStoreFloat3(&this->activeBall.direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->activeBall.direction), 0.95f));
 			}
 			else if (this->activeBall.pos.x + this->activeBall.radius > BOARD_HEIGHT / 2)
 			{
@@ -258,7 +256,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				//Fix collision
 				this->activeBall.pos.x = BOARD_HEIGHT / 2 - this->activeBall.radius;
 				//Apply 5% velocity transfer to table
-				this->activeBall.power *= 0.95f;
+				DirectX::XMStoreFloat3(&this->activeBall.direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->activeBall.direction), 0.95f));
 			}
 			if (this->activeBall.pos.z - this->activeBall.radius < -BOARD_WIDTH / 2)
 			{
@@ -268,7 +266,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				//Fix collision
 				this->activeBall.pos.z = -BOARD_WIDTH / 2 + this->activeBall.radius;
 				//Apply 5% velocity transfer to table
-				this->activeBall.power *= 0.95f;
+				DirectX::XMStoreFloat3(&this->activeBall.direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->activeBall.direction), 0.95f));
 			}
 			else if (this->activeBall.pos.z + this->activeBall.radius > BOARD_WIDTH / 2)
 			{
@@ -278,7 +276,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 				//Fix collision
 				this->activeBall.pos.z = BOARD_WIDTH / 2 - this->activeBall.radius;
 				//Apply 5% velocity transfer to table
-				this->activeBall.power *= 0.95f;
+				DirectX::XMStoreFloat3(&this->activeBall.direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->activeBall.direction), 0.95f));
 			}
 
 			//Check other balls
@@ -295,7 +293,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						//Fix collision
 						this->otherBalls[ballIndex].pos.x = -BOARD_HEIGHT / 2 + this->otherBalls[ballIndex].radius;
 						//Apply 5% velocity transfer to table
-						this->activeBall.power *= 0.95f;
+						DirectX::XMStoreFloat3(&this->otherBalls[ballIndex].direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->otherBalls[ballIndex].direction), 0.95f));
 					}
 					else if (this->otherBalls[ballIndex].pos.x + this->otherBalls[ballIndex].radius > BOARD_HEIGHT / 2)
 					{
@@ -305,7 +303,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						//Fix collision
 						this->otherBalls[ballIndex].pos.x = BOARD_HEIGHT / 2 - this->otherBalls[ballIndex].radius;
 						//Apply 5% velocity transfer to table
-						this->activeBall.power *= 0.95f;
+						DirectX::XMStoreFloat3(&this->otherBalls[ballIndex].direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->otherBalls[ballIndex].direction), 0.95f));
 					}
 					if (this->otherBalls[ballIndex].pos.z - this->otherBalls[ballIndex].radius < -BOARD_WIDTH / 2)
 					{
@@ -315,7 +313,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						//Fix collision
 						this->otherBalls[ballIndex].pos.z = -BOARD_WIDTH / 2 + this->otherBalls[ballIndex].radius;
 						//Apply 5% velocity transfer to table
-						this->activeBall.power *= 0.95f;
+						DirectX::XMStoreFloat3(&this->otherBalls[ballIndex].direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->otherBalls[ballIndex].direction), 0.95f));
 					}
 					else if (this->otherBalls[ballIndex].pos.z + this->otherBalls[ballIndex].radius > BOARD_WIDTH / 2)
 					{
@@ -325,7 +323,7 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						//Fix collision
 						this->otherBalls[ballIndex].pos.z = BOARD_WIDTH / 2 - this->otherBalls[ballIndex].radius;
 						//Apply 5% velocity transfer to table
-						this->activeBall.power *= 0.95f;
+						DirectX::XMStoreFloat3(&this->otherBalls[ballIndex].direction, DirectX::XMVectorScale(DirectX::XMLoadFloat3(&this->otherBalls[ballIndex].direction), 0.95f));
 					}
 				}
 			}
@@ -370,16 +368,8 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 						this->activeBall.pos.x -= storeIn.x;
 						this->activeBall.pos.z -= storeIn.z;
 
-						
-
-
-
-						bool stationary = false;
-						if (this->activeBall.direction.x == 0.0f && this->activeBall.direction.z == 0.0f || this->otherBalls[i].direction.x == 0 && this->otherBalls[i].direction.z == 0)
-						{
-							stationary = true;
-						}
-						if (stationary || true)
+						//if a collision happened that needs to be solved
+						if (true)
 						{
 							DirectX::XMVECTOR un, ut;
 							//Calculate the unit normal (un)
@@ -405,16 +395,23 @@ int BilliardState::Update(float deltaTime, InputHandler * input, GraphicHandler 
 							newV1t = v1t;
 							newV2t = v2t;
 							//Why am I using vectors for one dimensional calculations?
-							newV1n = DirectX::XMVectorScale((DirectX::XMVectorAdd(DirectX::XMVectorScale(v1n, this->otherBalls[i].mass - this->activeBall.mass), DirectX::XMVectorScale(v2n, 2.0f * this->activeBall.mass))), 1.0f / (this->otherBalls[i].mass + this->activeBall.mass));
-							newV2n = DirectX::XMVectorScale((DirectX::XMVectorAdd(DirectX::XMVectorScale(v2n, this->activeBall.mass - this->otherBalls[i].mass), DirectX::XMVectorScale(v1n, 2.0f * this->otherBalls[i].mass))), 1.0f / (this->otherBalls[i].mass + this->activeBall.mass));
-							//Must be wrong
-							/*newV1n = DirectX::XMVectorScale(newV1n, DirectX::XMVectorGetX(DirectX::XMVector2Length(un)));
-							newV1t = DirectX::XMVectorScale(newV1t, DirectX::XMVectorGetX(DirectX::XMVector2Length(ut)));
-							newV2n = DirectX::XMVectorScale(newV2n, DirectX::XMVectorGetX(DirectX::XMVector2Length(un)));
-							newV2t = DirectX::XMVectorScale(newV2t, DirectX::XMVectorGetX(DirectX::XMVector2Length(ut)));
-							newV1 = DirectX::XMVectorAdd(newV1n, newV1t);
-							newV2 = DirectX::XMVectorAdd(newV2n, newV2t);*/
-							//But the value in newV1(x) should be one dimensional right?
+							// (v1- * (m1 - m2 * e) + v2- * m2 * (1 + e)) / (m1 + m2)
+							// (v1- * m1 * (1 + e) + v2- * (m2 - e * m1)) / (m1 + m2)
+							float oldV1 = DirectX::XMVectorGetX(v1n), oldV2 = DirectX::XMVectorGetX(v2n);
+							float m1 = this->otherBalls[i].mass, m2 = this->activeBall.mass;
+							float newV1Force = 0.0f, newV2Force = 0.0f;
+							//float newV1Force = (DirectX::XMVectorGetX(v1n) * (this->otherBalls[i].mass - this->activeBall.mass) + DirectX::XMVectorGetX(v2n) * 2.0f * this->activeBall.mass) / (this->otherBalls[i].mass + this->activeBall.mass);
+							newV1Force = (oldV1 * (m1 - m2 * COLLISION_RESTITUTION) + oldV2 * m2 * (1 + COLLISION_RESTITUTION)) / (m1 + m2);
+							newV2Force = (oldV2 * (m2 - m1 * COLLISION_RESTITUTION) + oldV1 * m1 * (1 + COLLISION_RESTITUTION)) / (m1 + m2);
+
+							//newV1n = DirectX::XMVectorScale((DirectX::XMVectorAdd(DirectX::XMVectorScale(v1n, this->otherBalls[i].mass - this->activeBall.mass), DirectX::XMVectorScale(v2n, 2.0f * this->activeBall.mass))), 1.0f / (this->otherBalls[i].mass + this->activeBall.mass));
+							//newV2n = DirectX::XMVectorScale((DirectX::XMVectorAdd(DirectX::XMVectorScale(v2n, this->activeBall.mass - this->otherBalls[i].mass), DirectX::XMVectorScale(v1n, 2.0f * this->otherBalls[i].mass))), 1.0f / (this->otherBalls[i].mass + this->activeBall.mass));
+							newV1n = DirectX::XMLoadFloat4(&DirectX::XMFLOAT4(newV1Force, newV1Force, newV1Force, newV1Force));
+							newV2n = DirectX::XMLoadFloat4(&DirectX::XMFLOAT4(newV2Force, newV2Force, newV2Force, newV2Force));
+							/*newV1n = DirectX::XMVectorScale(un, newV1Force);
+							newV1t = DirectX::XMVectorScale(ut, newV1Force);
+							newV2n = DirectX::XMVectorScale(un, newV2Force);
+							newV2t = DirectX::XMVectorScale(ut, newV2Force);*/
 							newV1n = DirectX::XMVectorMultiply(newV1n, un);
 							newV1t = DirectX::XMVectorMultiply(newV1t, ut);
 							newV2n = DirectX::XMVectorMultiply(newV2n, un);
